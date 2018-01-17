@@ -20,7 +20,7 @@ public class BoundedQueueTest {
 	}
 
 	
-	//Test C1: 
+	//Test C1: inicialización cuando la capacidad no es positiva
 	@Test (expected = IllegalArgumentException.class)
 	public void testForSoloNullElement()
 	{
