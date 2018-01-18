@@ -27,5 +27,4 @@ public class BoundedQueueTest {
 		queue = new BoundedQueue(-4);
 	}
 	
-	
 }
