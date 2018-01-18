@@ -1,4 +1,3 @@
-
 import static org.junit.Assert.*;
 import org.junit.*;
 import java.util.*;
@@ -27,4 +26,24 @@ public class BoundedQueueTest {
 		queue = new BoundedQueue(-4);
 	}
 	
+	// Test cola llena
+		@Test(expected=IllegalStateException.class)
+		public void test1 (){
+			queue.deQueue();
+			assertFalse(queue.isFull());
+		}
+
+		// Test cola vacia
+		@Test(expected=IllegalStateException.class)
+		public void test2 () {
+			queue.deQueue();
+			assertTrue (queue.isEmpty());
+	}
+	
+	// Test happy path
+	@Test
+	public void test3 () {
+		queue.enQueue((Object) 10);
+	}
 }
+
