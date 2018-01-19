@@ -9,13 +9,13 @@ public class BoundedQueueTest {
 	@Before      // Set up - Called before every test method.
 	public void setUp()
 	{
-	   queue = new BoundedQueue(4);
+		queue = new BoundedQueue(4);
 	}
 
 	@After      // Tear down - Called after every test method.
 	public void tearDown()
 	{
-	   queue = null;  // redundant in this example!
+	  	queue = null;  // redundant in this example!
 	}
 
 	
@@ -27,17 +27,17 @@ public class BoundedQueueTest {
 	}
 	
 	// Test cola llena
-		@Test(expected=IllegalStateException.class)
-		public void test1 (){
-			queue.deQueue();
-			assertFalse(queue.isFull());
-		}
+	@Test(expected=IllegalStateException.class)
+	public void test1 (){
+		queue.deQueue();
+		assertFalse(queue.isFull());
+	}
 
-		// Test cola vacia
-		@Test(expected=IllegalStateException.class)
-		public void test2 () {
-			queue.deQueue();
-			assertTrue (queue.isEmpty());
+	// Test cola vacia
+	@Test(expected=IllegalStateException.class)
+	public void test2 () {
+		queue.deQueue();
+		assertTrue (queue.isEmpty());
 	}
 	
 	// Test happy path
